@@ -1,0 +1,102 @@
+# Created at 2023-11-22T21:51:29.082
+Exiting self fork JVM. Received SHUTDOWN command from Maven shutdown hook.
+Thread dump before exiting the process (5676@DESKTOP-NSM8SPR):
+"main" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@11.0.21/jdk.internal.reflect.ReflectionFactory.checkInitted(ReflectionFactory.java:692)
+        at java.base@11.0.21/jdk.internal.reflect.ReflectionFactory.newConstructorAccessor(ReflectionFactory.java:224)
+        at java.base@11.0.21/java.lang.reflect.Constructor.acquireConstructorAccessor(Constructor.java:527)
+        at java.base@11.0.21/java.lang.reflect.Constructor.newInstance(Constructor.java:487)
+        at java.base@11.0.21/java.security.Provider.newInstanceUtil(Provider.java:156)
+        at java.base@11.0.21/java.security.Provider$Service.newInstance(Provider.java:1926)
+        at java.base@11.0.21/javax.crypto.Cipher.chooseProvider(Cipher.java:895)
+        at java.base@11.0.21/javax.crypto.Cipher.init(Cipher.java:1431)
+        at java.base@11.0.21/sun.security.ssl.SSLCipher$T12GcmWriteCipherGenerator$GcmWriteCipher.encrypt(SSLCipher.java:1748)
+        at java.base@11.0.21/sun.security.ssl.OutputRecord.t10Encrypt(OutputRecord.java:534)
+        at java.base@11.0.21/sun.security.ssl.OutputRecord.encrypt(OutputRecord.java:470)
+        at java.base@11.0.21/sun.security.ssl.SSLSocketOutputRecord.flush(SSLSocketOutputRecord.java:270)
+        at java.base@11.0.21/sun.security.ssl.HandshakeOutStream.flush(HandshakeOutStream.java:89)
+        at java.base@11.0.21/sun.security.ssl.Finished$T12FinishedProducer.onProduceFinished(Finished.java:404)
+        at java.base@11.0.21/sun.security.ssl.Finished$T12FinishedProducer.produce(Finished.java:379)
+        at java.base@11.0.21/sun.security.ssl.SSLHandshake.produce(SSLHandshake.java:436)
+        at java.base@11.0.21/sun.security.ssl.ServerHelloDone$ServerHelloDoneConsumer.consume(ServerHelloDone.java:182)
+        at java.base@11.0.21/sun.security.ssl.SSLHandshake.consume(SSLHandshake.java:392)
+        at java.base@11.0.21/sun.security.ssl.HandshakeContext.dispatch(HandshakeContext.java:478)
+        at java.base@11.0.21/sun.security.ssl.HandshakeContext.dispatch(HandshakeContext.java:456)
+        at java.base@11.0.21/sun.security.ssl.TransportContext.dispatch(TransportContext.java:199)
+        at java.base@11.0.21/sun.security.ssl.SSLTransport.decode(SSLTransport.java:172)
+        at java.base@11.0.21/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1383)
+        at java.base@11.0.21/sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1296)
+        at java.base@11.0.21/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:416)
+        at java.base@11.0.21/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:388)
+        at app//com.microsoft.sqlserver.jdbc.TDSChannel.enableSSL(IOBuffer.java:1824)
+        at app//com.microsoft.sqlserver.jdbc.SQLServerConnection.connectHelper(SQLServerConnection.java:2760)
+        at app//com.microsoft.sqlserver.jdbc.SQLServerConnection.login(SQLServerConnection.java:2418)
+        at app//com.microsoft.sqlserver.jdbc.SQLServerConnection.connectInternal(SQLServerConnection.java:2265)
+        at app//com.microsoft.sqlserver.jdbc.SQLServerConnection.connect(SQLServerConnection.java:1291)
+        at app//com.microsoft.sqlserver.jdbc.SQLServerDriver.connect(SQLServerDriver.java:881)
+        at platform/java.sql@11.0.21/java.sql.DriverManager.getConnection(DriverManager.java:677)
+        at platform/java.sql@11.0.21/java.sql.DriverManager.getConnection(DriverManager.java:251)
+        at app//flightapp.DBConnUtils.openConnection(DBConnUtils.java:33)
+        at app//flightapp.FlightServiceTest.setup(FlightServiceTest.java:330)
+        at java.base@11.0.21/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at java.base@11.0.21/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+        at java.base@11.0.21/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.base@11.0.21/java.lang.reflect.Method.invoke(Method.java:566)
+        at app//org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+        at app//org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+        at app//org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+        at app//org.junit.internal.runners.statements.RunBefores.invokeMethod(RunBefores.java:33)
+        at app//org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:24)
+        at app//org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+        at app//org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+        at app//org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:364)
+        at app//org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:272)
+        at app//org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:237)
+        at app//org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:158)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:428)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:562)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:548)
+
+"Reference Handler" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@11.0.21/java.lang.ref.Reference.waitForReferencePendingList(Native Method)
+        at java.base@11.0.21/java.lang.ref.Reference.processPendingReferences(Reference.java:241)
+        at java.base@11.0.21/java.lang.ref.Reference$ReferenceHandler.run(Reference.java:213)
+
+"Finalizer" 
+   java.lang.Thread.State: WAITING
+        at java.base@11.0.21/java.lang.Object.wait(Native Method)
+        at java.base@11.0.21/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+        at java.base@11.0.21/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:176)
+        at java.base@11.0.21/java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:170)
+
+"Signal Dispatcher" 
+   java.lang.Thread.State: RUNNABLE
+
+"Attach Listener" 
+   java.lang.Thread.State: RUNNABLE
+
+"Common-Cleaner" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@11.0.21/java.lang.Object.wait(Native Method)
+        at java.base@11.0.21/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+        at java.base@11.0.21/jdk.internal.ref.CleanerImpl.run(CleanerImpl.java:148)
+        at java.base@11.0.21/java.lang.Thread.run(Thread.java:834)
+        at java.base@11.0.21/jdk.internal.misc.InnocuousThread.run(InnocuousThread.java:134)
+
+"surefire-forkedjvm-command-thread" 
+   java.lang.Thread.State: RUNNABLE
+        at java.management@11.0.21/sun.management.ThreadImpl.getThreadInfo1(Native Method)
+        at java.management@11.0.21/sun.management.ThreadImpl.getThreadInfo(ThreadImpl.java:197)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.generateThreadDump(ForkedBooter.java:649)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.access$400(ForkedBooter.java:82)
+        at app//org.apache.maven.surefire.booter.ForkedBooter$4.update(ForkedBooter.java:340)
+        at app//org.apache.maven.surefire.booter.CommandReader$CommandRunnable.callListeners(CommandReader.java:423)
+        at app//org.apache.maven.surefire.booter.CommandReader$CommandRunnable.exitByConfiguration(CommandReader.java:435)
+        at app//org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:388)
+        at java.base@11.0.21/java.lang.Thread.run(Thread.java:834)
+
+
+

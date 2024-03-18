@@ -1,0 +1,122 @@
+# Created at 2023-11-11T20:22:22.126
+<<exit>> <<1>>
+
+
+# Created at 2023-11-11T20:22:22.134
+System.exit() or native command error interrupted process checker.
+java.lang.IllegalStateException: error [STOPPED] to read process 15220
+	at org.apache.maven.surefire.booter.PpidChecker.checkProcessInfo(PpidChecker.java:148)
+	at org.apache.maven.surefire.booter.PpidChecker.isProcessAlive(PpidChecker.java:125)
+	at org.apache.maven.surefire.booter.ForkedBooter$2.run(ForkedBooter.java:278)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+
+# Created at 2023-11-11T20:22:22.214
+Exiting self fork JVM. Received SHUTDOWN command from Maven shutdown hook.
+Thread dump before exiting the process (12888@DESKTOP-NSM8SPR):
+"main" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@11.0.21/jdk.internal.util.Preconditions.checkFromIndexSize(Preconditions.java:344)
+        at java.base@11.0.21/java.util.Objects.checkFromIndexSize(Objects.java:424)
+        at java.base@11.0.21/java.io.ByteArrayOutputStream.write(ByteArrayOutputStream.java:155)
+        at java.base@11.0.21/java.io.DataOutputStream.write(DataOutputStream.java:107)
+        at java.base@11.0.21/java.io.DataOutputStream.write(DataOutputStream.java:107)
+        at java.base@11.0.21/java.io.DataOutputStream.writeUTF(DataOutputStream.java:401)
+        at java.base@11.0.21/java.io.DataOutputStream.writeUTF(DataOutputStream.java:323)
+        at java.base@11.0.21/java.lang.reflect.ProxyGenerator$ConstantPool$ValueEntry.write(ProxyGenerator.java:1940)
+        at java.base@11.0.21/java.lang.reflect.ProxyGenerator$ConstantPool.write(ProxyGenerator.java:1847)
+        at java.base@11.0.21/java.lang.reflect.ProxyGenerator.generateClassFile(ProxyGenerator.java:533)
+        at java.base@11.0.21/java.lang.reflect.ProxyGenerator.generateProxyClass(ProxyGenerator.java:338)
+        at java.base@11.0.21/java.lang.reflect.Proxy$ProxyBuilder.defineProxyClass(Proxy.java:535)
+        at java.base@11.0.21/java.lang.reflect.Proxy$ProxyBuilder.build(Proxy.java:648)
+        at java.base@11.0.21/java.lang.reflect.Proxy.lambda$getProxyConstructor$0(Proxy.java:415)
+        at java.base@11.0.21/java.lang.reflect.Proxy$$Lambda$37/0x000000080009b440.apply(Unknown Source)
+        at java.base@11.0.21/jdk.internal.loader.AbstractClassLoaderValue$Memoizer.get(AbstractClassLoaderValue.java:329)
+        at java.base@11.0.21/jdk.internal.loader.AbstractClassLoaderValue.computeIfAbsent(AbstractClassLoaderValue.java:205)
+        at java.base@11.0.21/java.lang.reflect.Proxy.getProxyConstructor(Proxy.java:413)
+        at java.base@11.0.21/java.lang.reflect.Proxy.newProxyInstance(Proxy.java:1006)
+        at java.base@11.0.21/sun.reflect.annotation.AnnotationParser$1.run(AnnotationParser.java:306)
+        at java.base@11.0.21/sun.reflect.annotation.AnnotationParser$1.run(AnnotationParser.java:304)
+        at java.base@11.0.21/java.security.AccessController.doPrivileged(Native Method)
+        at java.base@11.0.21/sun.reflect.annotation.AnnotationParser.annotationForMap(AnnotationParser.java:304)
+        at java.base@11.0.21/sun.reflect.annotation.AnnotationParser.parseAnnotation2(AnnotationParser.java:294)
+        at java.base@11.0.21/sun.reflect.annotation.AnnotationParser.parseAnnotations2(AnnotationParser.java:121)
+        at java.base@11.0.21/sun.reflect.annotation.AnnotationParser.parseAnnotations(AnnotationParser.java:73)
+        at java.base@11.0.21/java.lang.reflect.Executable.declaredAnnotations(Executable.java:604)
+        at java.base@11.0.21/java.lang.reflect.Executable.declaredAnnotations(Executable.java:602)
+        at java.base@11.0.21/java.lang.reflect.Executable.getDeclaredAnnotations(Executable.java:590)
+        at java.base@11.0.21/java.lang.reflect.Method.getDeclaredAnnotations(Method.java:703)
+        at java.base@11.0.21/java.lang.reflect.AccessibleObject.getAnnotations(AccessibleObject.java:533)
+        at app//org.junit.runners.model.FrameworkMethod.getAnnotations(FrameworkMethod.java:201)
+        at app//org.junit.runners.model.TestClass.addToAnnotationLists(TestClass.java:84)
+        at app//org.junit.runners.model.TestClass.scanAnnotatedMembers(TestClass.java:66)
+        at app//org.junit.runners.model.TestClass.<init>(TestClass.java:57)
+        at app//org.junit.runners.Parameterized$RunnersFactory.<init>(Parameterized.java:370)
+        at app//org.junit.runners.Parameterized$RunnersFactory.<init>(Parameterized.java:360)
+        at app//org.junit.runners.Parameterized.<init>(Parameterized.java:303)
+        at java.base@11.0.21/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+        at java.base@11.0.21/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+        at java.base@11.0.21/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+        at java.base@11.0.21/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+        at app//org.junit.internal.builders.AnnotatedBuilder.buildRunner(AnnotatedBuilder.java:104)
+        at app//org.junit.internal.builders.AnnotatedBuilder.runnerForClass(AnnotatedBuilder.java:86)
+        at app//org.junit.runners.model.RunnerBuilder.safeRunnerForClass(RunnerBuilder.java:70)
+        at app//org.junit.internal.builders.AllDefaultPossibilitiesBuilder.runnerForClass(AllDefaultPossibilitiesBuilder.java:37)
+        at app//org.junit.runners.model.RunnerBuilder.safeRunnerForClass(RunnerBuilder.java:70)
+        at app//org.junit.internal.requests.ClassRequest.createRunner(ClassRequest.java:28)
+        at app//org.junit.internal.requests.MemoizingRequest.getRunner(MemoizingRequest.java:19)
+        at app//org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:361)
+        at app//org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:272)
+        at app//org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:237)
+        at app//org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:158)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:428)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:562)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:548)
+
+"Reference Handler" 
+   java.lang.Thread.State: RUNNABLE
+        at java.base@11.0.21/java.lang.ref.Reference.waitForReferencePendingList(Native Method)
+        at java.base@11.0.21/java.lang.ref.Reference.processPendingReferences(Reference.java:241)
+        at java.base@11.0.21/java.lang.ref.Reference$ReferenceHandler.run(Reference.java:213)
+
+"Finalizer" 
+   java.lang.Thread.State: WAITING
+        at java.base@11.0.21/java.lang.Object.wait(Native Method)
+        at java.base@11.0.21/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+        at java.base@11.0.21/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:176)
+        at java.base@11.0.21/java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:170)
+
+"Signal Dispatcher" 
+   java.lang.Thread.State: RUNNABLE
+
+"Attach Listener" 
+   java.lang.Thread.State: RUNNABLE
+
+"Common-Cleaner" 
+   java.lang.Thread.State: TIMED_WAITING
+        at java.base@11.0.21/java.lang.Object.wait(Native Method)
+        at java.base@11.0.21/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+        at java.base@11.0.21/jdk.internal.ref.CleanerImpl.run(CleanerImpl.java:148)
+        at java.base@11.0.21/java.lang.Thread.run(Thread.java:834)
+        at java.base@11.0.21/jdk.internal.misc.InnocuousThread.run(InnocuousThread.java:134)
+
+"surefire-forkedjvm-command-thread" 
+   java.lang.Thread.State: RUNNABLE
+        at java.management@11.0.21/sun.management.ThreadImpl.getThreadInfo1(Native Method)
+        at java.management@11.0.21/sun.management.ThreadImpl.getThreadInfo(ThreadImpl.java:197)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.generateThreadDump(ForkedBooter.java:649)
+        at app//org.apache.maven.surefire.booter.ForkedBooter.access$400(ForkedBooter.java:82)
+        at app//org.apache.maven.surefire.booter.ForkedBooter$4.update(ForkedBooter.java:340)
+        at app//org.apache.maven.surefire.booter.CommandReader$CommandRunnable.callListeners(CommandReader.java:423)
+        at app//org.apache.maven.surefire.booter.CommandReader$CommandRunnable.exitByConfiguration(CommandReader.java:435)
+        at app//org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:388)
+        at java.base@11.0.21/java.lang.Thread.run(Thread.java:834)
+
+
+

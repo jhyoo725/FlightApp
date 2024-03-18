@@ -1,0 +1,32 @@
+What is one thing that you learned?
+
+    - One thing that I learned through this assignment is the connection between SQL and Java and 
+    how we can give information or store values in the database through the mix of these languages
+
+One thing that surprised you?
+
+    - One thing that I was surprised was how hard it was to debug.
+
+A question you still have after doing this assignment?
+
+    - Don't really have a question.
+
+Recall the debugging technique you described in the HW3 writeup.  Did you use it or something similar when debugging M1?
+(this is a simple yes/no question)
+
+    - No
+
+In 1-2 sentences, describe a bug in one of your M1 queries . Then, describe how you noticed the bug and, in 3-4 sentences, how you fixed it. 
+If you answered “yes” above, please describe a different bug.
+
+    - One bug that I found was a SQL Exception when we excute the Query. I have found the bug through printing out a message and 
+    checking until which part of the code runs. I noticed that excuteQuery was having an error and noticed that my sql was wrong.
+    I have ordered the two hop itineraries with f1.actual_time when I was supposed to order it through the total time which could
+    be found through adding the actual_time of f1 and f2.
+
+This project demonstrated how application logic can perform transformations on query results (eg, merging direct and indirect itineraries) or 
+on user input (eg, salting and hashing passwords).  
+What other logic would you like to see and/or implement in FlightApp's Java; ie, logic that cannot be done in SQL or by the user?
+
+    - One thing I would like to see is the logging off after a certain time. I noticed that if there is any user that is logged in, 
+    there can't be another user at all until the user quits. So I wanted to see an implementation of a user logging off after certain time
